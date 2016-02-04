@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+'use strict'
+var c = require('skilstak-colors')
+
+function printRed(name) {
+  console.log(c.clear + c.r + name + c.reset);
+}
+
+var printRed = function (name) {
+  console.log(c.clear + c.r + hello + c.reset);
+}
+
+var printMulti = function (name) {
+  while (true) {
+    console.log(c.clear + c.multi('Hello ' + name) + c.reset);
+  }
+}
+
+var firstArg = process.argv[2];
+
+printMulti(firstArg);
